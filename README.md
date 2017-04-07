@@ -27,20 +27,8 @@ Step 3: ionic serve -l.
 <br></br>
 [TRELLO:  User Stories](https://trello.com/b/piXaTwuQ/madcap)
 
-## ERD
-![ERD] (assets/)
-##Login Page
-![Login Page] (assets/)
-##Home
-![Home] (assets/)
-##Profile
-![Profile] (assets/)
-##Create Post 
-![Create] (assets/)
-##Post
-![Post] (assets/)
-
-
+## ERD & Wireframes
+![ERD] (assets/EDR-wireframes.png)
 
 ## Approach
  I will begin by refreashing myself on our ionic markdowns as well as watch videos for MVP features. I will then focus on setting up a basic app while testing it out on a server. I plan to make the app accessible for both iOS and Andriod so I look forward to comparing them side by side as I develop the project
