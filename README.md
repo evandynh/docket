@@ -14,21 +14,14 @@ There is only one rule. You must be in the picture you take. The goal of the app
 - Rack up points to become a leader on your local MadCap leaderboard.
 - Share challenges on all of your favorite social media.
 
-## Deploy Instructions
-```
-Step 1: Clone the repository from GitHub.
-
-Step 2: npm install.
-
-Step 3: ionic serve -l.
-
-```
-
 <br></br>
 [TRELLO:  User Stories](https://trello.com/b/piXaTwuQ/madcap)
 
 ## ERD & Wireframes
-![ERD] (assets/EDR-wireframes.png)
+![](assets/EDR.png)
+![](assets/wireframe1.png)
+![](assets/wireframe2.png)
+![](assets/wireframe3.png)
 
 ## Approach
  I will begin by refreashing myself on our ionic markdowns as well as watch videos for MVP features. I will then focus on setting up a basic app while testing it out on a server. I plan to make the app accessible for both iOS and Andriod so I look forward to comparing them side by side as I develop the project
@@ -67,6 +60,16 @@ Lastly, I need to focus setting up the user experience for challenges and notifi
  HTML5 / CSS3
  SASS
  Bootstrap
+```
+
+## Deploy Instructions
+```
+Step 1: Clone the repository from GitHub.
+
+Step 2: npm install.
+
+Step 3: ionic serve -l.
+
 ```
 
 ## Unsolved Problems
