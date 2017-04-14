@@ -14,7 +14,29 @@ There is only one rule. You must be in the picture you take. The goal of the app
 - Rack up points to become a leader on your local MadCap leaderboard.
 - Share challenges on all of your favorite social media.
 
-<br></br>
+## Deploy Instructions
+
+Backend Setup - [Link to repo](https://github.com/evandynh/madcap-backend)
+```
+  Step 1: Clone the backend repository from GitHub.
+
+  Step 2: npm install.
+
+  Step 3: run nodemon.
+  
+  Step 4: run mongod. 
+  
+  Step 5: Visit localhost:3000 in the web browser
+```
+
+Frontend Setup - [Link to repo](https://github.com/evandynh/madcap-frontend)
+```
+  Step 1: Clone the frontend repository from Github
+  
+  Step 2: Run ionic serve -l in the terminal
+
+```
+
 [TRELLO:  User Stories](https://trello.com/b/piXaTwuQ/madcap)
 
 ## ERD & Wireframes
@@ -59,26 +81,6 @@ Lastly, I need to focus setting up the user experience for challenges and notifi
  AngularJS
  MongoDB
  HTML5 / CSS3
-```
-
-## Deploy Instructions
-```
-Backend Setup
-  Step 1: Clone the backend repository from GitHub.
-
-  Step 2: npm install.
-
-  Step 3: run nodemon.
-  
-  Step 4: run mongod. 
-  
-  Step 5: Visit localhost:3000 in the web browser
-
-Frontend Setup
-  Step 1: Clone the frontend repository from Github
-  
-  Step 2: Run ionic serve -l in the terminal
-
 ```
 
 ## Unsolved Problems
