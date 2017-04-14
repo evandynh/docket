@@ -14,7 +14,29 @@ There is only one rule. You must be in the picture you take. The goal of the app
 - Rack up points to become a leader on your local MadCap leaderboard.
 - Share challenges on all of your favorite social media.
 
-<br></br>
+## Deploy Instructions
+
+Backend Setup - [Link to repo](https://github.com/evandynh/madcap-backend)
+```
+  Step 1: Clone the backend repository from GitHub.
+
+  Step 2: npm install.
+
+  Step 3: run nodemon.
+  
+  Step 4: run mongod. 
+  
+  Step 5: Visit localhost:3000 in the web browser
+```
+
+Frontend Setup - [Link to repo](https://github.com/evandynh/madcap-frontend)
+```
+  Step 1: Clone the frontend repository from Github
+  
+  Step 2: Run ionic serve -l in the terminal
+
+```
+
 [TRELLO:  User Stories](https://trello.com/b/piXaTwuQ/madcap)
 
 ## ERD & Wireframes
@@ -54,23 +76,15 @@ Lastly, I need to focus setting up the user experience for challenges and notifi
 ## Technologies Used
 ```
  Ionic
+ Cordova
  NodeJS
  AngularJS
  MongoDB
  HTML5 / CSS3
- SASS
- Bootstrap
-```
-
-## Deploy Instructions
-```
-Step 1: Clone the repository from GitHub.
-
-Step 2: npm install.
-
-Step 3: ionic serve -l.
-
 ```
 
 ## Unsolved Problems
-More to come later...
+- User can sign in but there pictures do not save to there user profile.
+- Challenge page does not refresh once a challenge is completed.
+- Like buttons are extremely slow to update on home tab
+- Cannot inject auth factory in all factories
