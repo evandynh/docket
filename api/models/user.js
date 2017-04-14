@@ -1,47 +1,29 @@
-var mongoose  = require('mongoose'),
-    bcrypt    = require('bcrypt-nodejs'),
-    Challenge = require('./challenge')
+var mongoose = require('mongoose'),
+    Picture  = require('./picture')
 
-// =========================================================================
-// ========== Picture Schema ===============================================
-// =========================================================================
-
-var Picture = mongoose.Schema({
-  url: String,
-  description: String,
-  challenge: {
-    type: mongoose.Schema.ObjectId, ref: 'Challenge'
-  }
-})
-
-module.exports = mongoose.model('Picture', Picture)
-
-// =========================================================================
-// ========== User Schema ===============================================
-// =========================================================================
-
-var User = mongoose.Schema({
-  username: String,
-  local : {
-    email        : String,
-    password     : String,
-  },
-  facebook         : {
-    id           : String,
-    token        : String,
-    email        : String,
-    name         : String
-  },
+var userSchema = new mongoose.Schema({
+  email: { type: String, required: true, unique: true },
+  name:  { type: String, required: true },
   points: Number,
-  pictures: [Picture]
+  pictures: [{
+    type: mongoose.Schema.ObjectId,
+    ref: 'Picture'
+  }]
 });
 
-User.methods.encrypt = function(password) {
-  return bcrypt.hashSync(password, bcrypt.genSaltSync(8), null);
+// add bcrypt hashing to model (works on a password field)!
+userSchema.plugin(require('mongoose-bcrypt'));
+
+// Add a "transformation" to the model's toJson function that
+// stops the password field (even in digest format) from being
+// returned in any response.
+userSchema.options.toJSON = {
+  transform: function(document, returnedObject, options) {
+    delete returnedObject.password;
+    return returnedObject;
+  }
 };
 
-User.methods.validPassword = function(password) {
-  return bcrypt.compareSync(password, this.local.password);
-};
+var User = mongoose.model('User', userSchema);
 
-module.exports = mongoose.model('User', User);
+module.exports = User

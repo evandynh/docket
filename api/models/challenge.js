@@ -1,17 +1,11 @@
 var mongoose  = require('mongoose'),
     Picture   = require('./user')
 
-// =========================================================================
-// ========== Challenge Schema ===============================================
-// =========================================================================
-
-var Challenge = mongoose.Schema({
+var Challenge = new mongoose.Schema({
   title: String,
-  points: Number,
-  pictures: {
-    type: mongoose.Schema.ObjectId,
-    ref: 'Picture'
-  }
-})
+  points: Number
+});
 
-module.exports = mongoose.model('Challenge', Challenge)
+var Challenge = mongoose.model('Challenge', Challenge)
+
+module.exports = Challenge

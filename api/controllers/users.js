@@ -1,51 +1,48 @@
-var User = require('../models/user')
+var User = require("../models/User");
 
-// INDEX
-function index(req, res){
-  User.find({}, function(err, users){
-    if(err) throw err
-    res.json(users)
-  })
-}
 
-// Create
-function create(req, res){
-  var user = new User(req.body)
-  user.save(function(err, user){
-    if(err) throw err
-    res.json({message: "User successfully created!", user: user})
-  })
-}
+function create(req, res, next) {
+  if (!req.body.password) {
+    return res.status(422).send('Missing required fields');
+  }
+  User
+    .create(req.body)
+    .then(function(user) {
+      res.json({
+        success: true,
+        message: 'Successfully created user.',
+        data: {
+          email: user.email,
+          id:    user._id
+        }
+      });
+    }).catch(function(err) {
+      if (err.message.match(/E11000/)) {
+        err.status = 409;
+      } else {
+        err.status = 422;
+      }
+      next(err);
+    });
+};
 
-//Update
-function update(req, res){
-  var id = req.params.id
-
-  User.findById(id, function(err, user){
-    if(err) throw err
-
-    if(req.body.username) user.username = req.body.username
-
-    user.save(function(err){
-      if(err) throw err
-      res.json({message: "User successfully updated", user: user})
+function me(req, res, next) {
+  User
+    .findOne({email: req.decoded.email}).exec()
+    .then(function(user) {
+      res.json({
+        success: true,
+        message: 'Successfully retrieved user data.',
+        data: user
+      });
     })
-  })
-}
+    .catch(function(err) {
+      next(err);
+    });
+};
 
-// Destroy
-function destroy(req, res){
-  var id = req.params.id
-
-  User.remove({_id: id}, function(err){
-    if(err) throw err
-    res.json({message: "User was successfully deleted!"})
-  })
-}
 
 module.exports = {
-  index: index,
   create: create,
-  update: update,
-  destroy: destroy
-}
+  me:     me
+};
