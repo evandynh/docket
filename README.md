@@ -36,9 +36,8 @@ Frontend Setup - [Link to repo](https://github.com/evandynh/madcap-frontend)
   Step 2: Run ionic serve -l in the terminal
 
 ```
-![](assets/double-phone.png)
-![](assets/single-phone1.png)
 ![](assets/single-phone2.png)
+![](assets/single-phone1.png)
 
 [TRELLO:  User Stories](https://trello.com/b/piXaTwuQ/madcap)
 
