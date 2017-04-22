@@ -1,11 +1,11 @@
 ## MadCap
-MadCap is an exciting new picture challenge app that pits you against your friends to see you can take the craziest photos based on a given senario. Each day you will recieve a daily challenge which will ask you to take a selfie in a unusual way. For Example, you could be asked to:
+MadCap is an exciting new picture challenge app that pits you against your friends to see you can take the craziest photos based on a given scenario. Each day you will receive a daily challenge which will ask you to take a selfie in a unusual way. For Example, you could be asked to:
 
 "Take a selfie with a non-domestic animal" 
 
 "Take a selfie with a Fast Food Employee"
 
-There is only one rule. You must be in the picture you take. The goal of the app is to bring you outside your comfort zone in a fun and unique way that you can look back at for years to come. You also you recieve points for completing each challenge that raised your MadCap level. Be the best MadCap in your area and your challenge photo will be displayed for all fellow MadCappers to look up to. So be creative and have fun. The only limitation is your own imagination.
+There is only one rule. You must be in the picture you take. The goal of the app is to bring you outside your comfort zone in a fun and unique way that you can look back at for years to come. You also you receive points for completing each challenge that raised your MadCap level. Be the best MadCap in your area and your challenge photo will be displayed for all fellow MadCappers to look up to. So be creative and have fun. The only limitation is your own imagination.
 
 ### Features
 
@@ -36,6 +36,9 @@ Frontend Setup - [Link to repo](https://github.com/evandynh/madcap-frontend)
   Step 2: Run ionic serve -l in the terminal
 
 ```
+![](assets/double-phone.png)
+![](assets/single-phone1.png)
+![](assets/single-phone2.png)
 
 [TRELLO:  User Stories](https://trello.com/b/piXaTwuQ/madcap)
 
